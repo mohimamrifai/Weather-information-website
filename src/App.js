@@ -12,7 +12,7 @@ moment.updateLocale('id', localization);
 
 function App() {
 
-  const [idProvinsi, setIdProvinsi] = useState(11)
+  const [idProvinsi, setIdProvinsi] = useState('11')
   const [Arrkota, setArrKota] = useState([])
   const [dataCuaca, setDataCuaca] = useState([])
   const namaProvinsi = 'dki-jakarta'
@@ -82,10 +82,14 @@ function App() {
       getCuaca(namaProvinsi, namaKota)
   }
   
+
   useEffect(() => {
     getCuaca(namaProvinsi, namaKota)
     getArrKota(idProvinsi)
   }, [idProvinsi])
+
+  getArrKota(idProvinsi)
+
 
 
 
