@@ -22,7 +22,7 @@ function App() {
   // const [newProvinsi, setNewProvinsi] = useState("")
 
   const getArrKota = async (id) => {
-    const resp = await fetch(`http://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
+    const resp = await fetch(`https://dev.farizdotid.com/api/daerahindonesia/kota?id_provinsi=${id}`)
       .then(res => res.json())
       .catch(err => console.log(err))
 
@@ -87,8 +87,6 @@ function App() {
     getCuaca(namaProvinsi, namaKota)
     getArrKota(idProvinsi)
   }, [idProvinsi])
-
-  getArrKota(idProvinsi)
 
 
 
