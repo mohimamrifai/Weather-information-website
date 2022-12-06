@@ -1,38 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  padding-top: 100px;
+  height: 1200px;
+  background: linear-gradient(180deg, #5889E7 38.63%, rgba(9, 111, 204, 0) 100%);;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main_content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+.container_input {
+  margin-left: 130px;
+  display: flex;
+  gap: 20px;
+}
+
+.input_provinsi {
+  position: relative;
+  width: 430px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.input_provinsi .select_provinsi {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(138, 138, 138);
+}
+
+.input_kota {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+
+.input_kota .select_kota {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(138, 138, 138);
+}
+
+
+.main {
+  margin-top: 50px;
+  margin-left: 130px;
+}
+
+.maps {
+  width: 100%;
+  height: 250px;
+}
+
+.card_gempa {
+  width: 450px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card_gempa .gempa_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  color: #034480;
+}
+
+.card_gempa p {
+  font-size: 14px;
+  color: #4A4A4A;
+}
+
+.gempa_content {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.gempa_content .koordinat, .gempa_content .kedalaman {
+  padding: 10px;
+  width: 200px;
+  background-color: #3175F9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+.kedalaman p, .koordinat p {
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 3px;
+  color: rgb(216, 216, 216);
+}
+
+.magnitudo {
+  background-color: #3175F9;
+  padding: 10px;
+  width: 190px;
+  border-radius: 5px;
+  height: 130px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.magnitudo span {
+  font-size: 70px;
+  margin-left: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo > * {
+  width: 100px;
+  height: 80px;
+  color: #5a5a5a;
+}
+
+.container_cuaca {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cuaca {
+  background-color: white;
+  margin-top: 80px;
+  width: 600px;
+  border-radius: 5px;
+  padding: 40px 50px;
+}
+
+.cuaca_right {
+  margin-right: 30px;
+}
+
+.suhu {
+  font-size: 90px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.cuaca_title {
+  color: #3175F9;
+}
+.tabs {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo_konten {
+  width: 60px;
+  height: 40px;
+}
+
+.logo_konten > * {
+  width: 40px;
+  height: 40px;
+  color: #5a5a5a;
+}
+
+.tab {
+  cursor: pointer;
+  transition: all .5s;
+  color: #3175F9;
+}
+
+.tab.tab_active {
+  color: #034480;
+  font-weight: bold;
+  transition: all .5s linear;
+  transition: all .5s;
+}
+
+.tabs_content {
+  margin-top: 20px;
+}
+
+.tab_content {
+  padding: 10px;
+  transition:  all .5s;
+}
+
+.jam_konten {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.jam_card {
+  text-align: center;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nonactive {
+  display: none;
+  transition:  all .5s;
+}
+
+
+
+@media (max-width:1000px) {
+  .container_input {
+    flex-direction: column;
+    margin-left: 70px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input_kota {
+    width: 430px;
+  }
+
+  .input_kota .select_kota {
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 50px;
+    margin-left: 60px;
+  }
+  
+  .main_content {
+    flex-direction: column-reverse;
+  }
+
+  .cuaca {
+    margin-top: 40px;
+    margin-left: 65px;
+  }
+
+  .card_gempa {
+    width: 600px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .container_input {
+    margin-left: 20px;
+  }
+  .input_kota, .input_provinsi {
+    width: 350px;
+  }
+
+  .cuaca {
+    margin-left: 20px;
+    padding: 20px;
+    width: 380px;
+  }
+
+  .jam_card {
+    width: 40px;
+  }
+
+  .card_gempa {
+    width: 380px;
+  }
+
+  .container_cuaca {
+    gap: 20px;
+  }
+
+  .gempa_content .koordinat, .gempa_content .kedalaman {
+    width: 130px;
+  }
+  
+  .main {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
+  .cuaca_right {
+    margin-right: 0;
+  }
+  .suhu {
+    font-size: 40px;
+  }
+
+  .t_max, .t_min {
+    flex-direction: column;
   }
 }
