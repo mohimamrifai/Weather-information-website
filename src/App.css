@@ -305,3 +305,23 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 478px) {
+  /* .input_kota, .input_provinsi {
+    width: 250px;
+  } */
+  .cuaca {
+    margin-left: 20px;
+    padding: 20px;
+    width: 350px;
+  }
+
+  .card_gempa {
+    width: 350px;
+    font-size: 14px;
+  }
+
+  .gempa_content .koordinat, .gempa_content .kedalaman {
+    width: 100px;
+  }
+}
