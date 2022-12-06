@@ -81,12 +81,17 @@ function App() {
 
       getCuaca(namaProvinsi, namaKota)
   }
-
+  
 
   useEffect(() => {
     getCuaca(namaProvinsi, namaKota)
     getArrKota(idProvinsi)
   }, [idProvinsi])
+
+  // useEffect(() => {
+  //   getCuaca(namaProvinsi, namaKota)
+  //   getArrKota(idProvinsi)
+  // }, [idProvinsi])
 
 
   return (
